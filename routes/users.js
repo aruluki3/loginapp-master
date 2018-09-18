@@ -14,7 +14,10 @@ router.get('/register', function (req, res) {
 router.get('/login', function (req, res) {
 	res.render('login');
 });
-
+// donations
+router.get('/donations', function (req, res) {
+	res.render('donations');
+});
 // Register User
 router.post('/register', function (req, res) {
 	var name = req.body.name;

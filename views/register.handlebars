@@ -1,9 +1,12 @@
-<h2 class="page-header">Register</h2>
+<div class='container'>
+  <div class="panel-body">
+<h2 class="page-header">User Registration</h2>
         {{#if errors}}
           {{#each errors}}
             <div class="alert alert-danger">{{msg}}</div>
           {{/each}}
         {{/if}}
+        <hr>
 <form method="post" action="/donors/register">
 <div class="form-group">
   <label>Fullname</label>
@@ -26,7 +29,7 @@
   <input type="number" min=20 max=50 class="form-control" placeholder="Age" name="age">
 </div>
 <div class="form-group">
-  <label>Bloodgroup</label>
+  <label>Blood Group</label>
 
   <select name="bloodgroup">
     <option value="a">A</option>
@@ -37,7 +40,7 @@
 
 </div>
 <div class="form-group">
-  <label>DateofBirth</label>
+  <label>Date Of Birth</label>
   <input type="date" class="form-control" placeholder="DateofBirth" name="date">
 </div>
 <div class="form-group">
@@ -128,7 +131,7 @@
   <input type="password" class="form-control" placeholder="ConfirmPassword" name="password2">
 </div>
 <div class="form-group">
-  <label>Diseas</label>
+  <label>Disease</label>
   <input type="text" class="form-control" placeholder="Diseas" name="diseas">
 </div>
 <div class="form-group">
@@ -136,5 +139,9 @@
   <input type="checkbox" name="alc" value="true"> yes<br>
   <input type="checkbox" name="alc" value="false"> no<br>
 </div>
-<button type="submit" class="btn btn-default">Submit</button>
+<button type="submit" class="btn btn-default register">Submit</button>
 </form>
+</div>
+</div>
+<br />
+<br />

@@ -66,7 +66,7 @@ router.post('/register', function(req, res){
       if(err) throw err;
       console.log(donor);
     });
-    req.flash('success_msg', 'you are reqistered and can now login');
+    req.flash('success_msg', 'You Can Login Now');
 
     res.redirect('/donors/login');
   }
@@ -108,7 +108,17 @@ passport.use(new LocalStrategy(
     res.redirect('/');
   });
 
+  router.get('/logout', function (req, res) {
+  	req.logout();
 
+  	req.flash('success_msg', 'You are logged out');
+
+  	res.redirect('/users/login');
+  });
+// //Admin
+// router.get('/admin', function(req, res){
+//   res.render('admin');
+// });
 
 
 

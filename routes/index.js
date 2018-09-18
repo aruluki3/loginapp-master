@@ -1,31 +1,31 @@
-// var express = require('express');
-// var router = express.Router();
-//
-// // Get Homepage
-// router.get('/', ensureAuthenticated, function(req, res){
-// 	res.render('index');
-// });
-//
-// function ensureAuthenticated(req, res, next){
-// 	if(req.isAuthenticated()){
-// 		return next();
-// 	} else {
-// 		//req.flash('error_msg','You are not logged in');
-// 		res.redirect('/users/login');
-// 	}
-// }
-//
-// module.exports = router;
 var express = require('express');
 var router = express.Router();
+
+var Admin = require('../models/admin');
 
 //Get Homepage
 router.get('/', function(req, res){
   res.render('index');
 });
 
-router.get('/admin', function(req, res){
-  res.render('admin')
+
+// donations
+router.get('/donations', function (req, res) {
+	res.render('donations');
 });
 
+// router.post('/adminception', (req, res)=>{
+//   var newAdmin = new Admin();
+//
+//   newAdmin.mail = req.body.mail;
+//   newAdmin.password = req.body.password;
+//
+//   Admin.createAdmin(newAdmin, (err, admin) => {
+//     if(err) throw err;
+//     console.log(admin);
+//   });
+//
+//   res.redirect('/admin');
+//
+// });
  module.exports = router;
